@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-2 text-center">Crystal Collector!</h1>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Instructions</h5>
+                <div class="card-text">
+                    <p>You will be given a random target number at the start of the game.</p>
+                    <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points
+                        to your total score.</p>
+                    <p>You win the game by matching your total score to the target number. You lose the game if your
+                        total scores goes above the target score.</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>Each time the game starts, the game will change the values of each crystal.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row mx-n2">
+            <div class="card order-3 order-sm-1 col-sm px-0 mx-2 my-sm-4">
+                <div class="card-body alert-primary">
+                    <h3 class="card-title">Target Score</h3>
+                    <div class="card-text display-4 text-center" id="targetScore">53</div>
+                </div>
+            </div>
+            <div class="card order-1 order-sm-2 col-sm px-0 mx-2 my-sm-4">
+                <div class="card-body">
+                    <h3 class="card-title alert-success">Wins</h3>
+                    <div class="card-text display-4 text-center text-success" id="winsCount">14</div>
+                </div>
+            </div>
+            <div class="card order-2 order-sm-3 col-sm px-0 mx-2 my-sm-4">
+                <div class="card-body">
+                    <h3 class="card-title alert-danger">Losses</h3>
+                    <div class="card-text display-4 text-center text-danger" id="lossesCount">10</div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="crystalRow">
+                    <span class="float-left my-auto mx-auto winLoseMessage">
+                        <h3 class="text-info">Special title treatment</h3>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </span>
+            <img src="assets/images/crystal1exsmall.png" class="float-left mx-auto crystal" id="crystal1"
+                crystal-index="0">
+            <img src="assets/images/crystal2exsmall.png" class="float-left mx-auto crystal" id="crystal2"
+                crystal-index="1">
+            <img src="assets/images/crystal3exsmall.png" class="float-left mx-auto crystal" id="crystal3"
+                crystal-index="2">
+            <img src="assets/images/crystal4exsmall.png" class="float-left mx-auto crystal" id="crystal4"
+                crystal-index="3">
+        </div>
+        <div class="row mx-n2">
+            <div class="card col-sm-4 px-0 mx-2 my-sm-4">
+                <div class="card-body alert-warning">
+                    <h3 class="card-title">Your Score</h3>
+                    <div class="card-text display-4 text-center" id="yourScore">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
