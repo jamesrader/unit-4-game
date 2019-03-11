@@ -2,6 +2,10 @@
     cursor: pointer;
 }
 
+.winLoseMessage{
+    height: 25px;
+}
+
 /* #crystalRow{
     height: auto;
-} */
+}  */

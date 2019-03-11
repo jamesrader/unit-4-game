@@ -45,27 +45,28 @@
             <div class="card order-3 order-sm-1 col-sm px-0 mx-2 my-sm-4">
                 <div class="card-body alert-primary">
                     <h3 class="card-title">Target Score</h3>
-                    <div class="card-text display-4 text-center" id="targetScore">53</div>
+                    <div class="card-text display-4 text-center" id="targetScore"></div>
                 </div>
             </div>
             <div class="card order-1 order-sm-2 col-sm px-0 mx-2 my-sm-4">
                 <div class="card-body">
                     <h3 class="card-title alert-success">Wins</h3>
-                    <div class="card-text display-4 text-center text-success" id="winsCount">14</div>
+                    <div class="card-text display-4 text-center text-success" id="winsCount"></div>
                 </div>
             </div>
             <div class="card order-2 order-sm-3 col-sm px-0 mx-2 my-sm-4">
                 <div class="card-body">
                     <h3 class="card-title alert-danger">Losses</h3>
-                    <div class="card-text display-4 text-center text-danger" id="lossesCount">10</div>
+                    <div class="card-text display-4 text-center text-danger" id="lossesCount"></div>
                 </div>
             </div>
         </div>
         <div class="row" id="crystalRow">
-                    <span class="float-left my-auto mx-auto winLoseMessage">
-                        <h3 class="text-info">Special title treatment</h3>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </span>
+                <div class="winLoseMessage ml-3">
+                        <h3 id="winLoseText"></h3>
+                        <button type="button" class="btn" id="playAgainButton">Play Again</button>
+                        <!-- <a href="javascript:;" class="btn btn-primary" id="playAgainButton">Play Again</a> -->
+                    </div>
             <img src="assets/images/crystal1exsmall.png" class="float-left mx-auto crystal" id="crystal1"
                 crystal-index="0">
             <img src="assets/images/crystal2exsmall.png" class="float-left mx-auto crystal" id="crystal2"

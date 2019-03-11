@@ -10,11 +10,7 @@ $(document).ready(function () {
 
     function initializeGame() {
         $(".winLoseMessage").hide();
-        //$(".loseMessage").hide();
-        //$(".playAgain").hide();
         $(".crystal").css("visibility", "visible");
-        //$(".loseMessage").css("visibility", "hidden");
-        //$(".winMessage").css("visibility", "hidden");
         targetScore = Math.floor((Math.random() * 102) + 19);
         $("#targetScore").text(targetScore);
         crystalValues=[];
@@ -35,19 +31,22 @@ $(document).ready(function () {
     }
 
     function playerWin() {
-        //$(".crystal").toggle();
+        $("#winLoseText").text("Congratulations...you win!");
+        $("#playAgainButton").removeClass("btn-danger");
+        $("#playAgainButton").addClass("btn-success");
         $(".winLoseMessage").show();
-        //$(".playAgain").show();
         $(".crystal").css("visibility", "hidden");
-        //$(".winMessage").css("visibility", "visible");
-        //alert("You win!!!");
         winsCount++;
         $("#winsCount").text(winsCount);
+        $("#playAgainButton").click(initializeGame);
         //initializeGame();
     }
 
     function playerLose() {
         //$(".crystal").toggle();
+        $("#winLoseText").text("Sorry...you lost.");
+        $("#playAgainButton").removeClass("btn-success");
+        $("#playAgainButton").addClass("btn-danger");
         $(".winLoseMessage").toggle();
         //$(".playAgain").show();
         $(".crystal").css("visibility", "hidden");
@@ -56,6 +55,7 @@ $(document).ready(function () {
         //alert("You lose!!!");
         lossesCount++;
         $("#lossesCount").text(lossesCount);
+        $("#playAgainButton").click(initializeGame);
         //initializeGame();
     }
 
