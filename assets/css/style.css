@@ -1,11 +1,5 @@
 .crystal {
     cursor: pointer;
+    width: 150px;
 }
 
-.winLoseMessage{
-    height: 25px;
-}
-
-/* #crystalRow{
-    height: auto;
-}  */
